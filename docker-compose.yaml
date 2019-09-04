@@ -7,8 +7,8 @@ services:
     volumes:
       - ./app:/var/www/html/
     environment:
-        PHP_ERROR_REPORTING: E_ALL
-    links: 
+      PHP_ERROR_REPORTING: E_ALL
+    links:
       - mysql
       - redis
   mysql:
@@ -16,8 +16,8 @@ services:
     ports:
       - 3306:3306
     environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: mydb
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
   redis:
     image: redis:latest
     ports:
